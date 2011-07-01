@@ -6,3 +6,7 @@ Several experimental ZK Widgets is useful but not yet included in official relea
 = Details =
 
 [https://github.com/peterkuo/zk_anchorlayout Anchor Layout]
+
+[http://code.google.com/p/zk5/wiki/SwifttabUsage Swifttab]
+
+[http://code.google.com/p/zk5/wiki/SelectboxUsage Selectbox]
