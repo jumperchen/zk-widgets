@@ -1,0 +1,5 @@
+<zk>
+	<window title="imagelabel component test" border="normal" width="300px"	apply="ctrl.DemoWindowComposer">
+		<imagelabel id="myComp" />
+	</window>
+</zk>
