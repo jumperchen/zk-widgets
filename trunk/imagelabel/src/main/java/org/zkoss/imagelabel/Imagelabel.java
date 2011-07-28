@@ -1,8 +1,8 @@
 package org.zkoss.imagelabel;
 
-import org.zkoss.zul.impl.XulElement;
+import org.zkoss.zul.impl.LabelImageElement;
 
-public class Imagelabel extends XulElement {
+public class Imagelabel extends LabelImageElement {
 
 	private static final long serialVersionUID = -4999861716845475461L;
 

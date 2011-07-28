@@ -4,9 +4,9 @@
 	<language-name>xul/html</language-name>
 
 	<version>
-		<version-class>org.zkoss.zk.Version</version-class>
-		<version-uid>5.0.7</version-uid>
-		<zk-version>5.0.7</zk-version>
+		<version-class>org.zkoss.imagelabel.Version</version-class>
+		<version-uid>0.8.0</version-uid>
+		<zk-version>5.0.0</zk-version>
 	</version>
 	
 	<component>

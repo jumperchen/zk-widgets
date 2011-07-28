@@ -1,4 +1,4 @@
-org.zkoss.imagelabel.Imagelabel = zk.$extends(zk.Widget, {
+org.zkoss.imagelabel.Imagelabel = zk.$extends(zul.LabelImageWidget, {
 	_label: '',
 	_image: '',
 	$define : {
