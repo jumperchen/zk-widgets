@@ -1,3 +1,0 @@
-<package name="org.zkoss.imagelabel" language="xul/html">
-	<widget name="Imagelabel"/>
-</package>
