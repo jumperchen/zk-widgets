@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.zkoss</groupId>
 	<artifactId>imagelabel</artifactId>
-	<version>0.8.0</version>
+	<version>0.8.1</version>
 	<properties>
-		<zk.version>5.0.6</zk.version>
+		<zk.version>5.0.8</zk.version>
 		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
-		<packname>-0.8.0-FL-${maven.build.timestamp}</packname>
+		<packname>-0.8.1-FL-${maven.build.timestamp}</packname>
 	</properties>
 	<packaging>jar</packaging>
 	<name>The imagelabel library</name>

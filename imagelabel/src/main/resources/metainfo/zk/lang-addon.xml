@@ -2,7 +2,7 @@
     <addon-name>imagelabel</addon-name>
   	<version>
 		<version-class>org.zkoss.imagelabel.Version</version-class>
-		<version-uid>0.8.0</version-uid>
+		<version-uid>0.8.1</version-uid>
 		<zk-version>5.0.6</zk-version><!-- or later -->
 	</version>
     
@@ -14,18 +14,6 @@
 		<mold>
 			<mold-name>default</mold-name>
 			<mold-uri>mold/imagelabel.js</mold-uri>
-
-			<!--
-			== Tip in advance ==
-				You don't have to specify a css.dsp if you need not ,
-				but usually you need it.
-
-				You could assign a .css file ,too.
-
-				The css.dsp is almost as same as CSS file ,
-				but have more powerful enhancement.	(like EL support.)
-			====
-			-->
 			<css-uri>css/imagelabel.css.dsp</css-uri>
 		</mold>
 	</component>
