@@ -5,9 +5,5 @@
 
 .z-imagelabel{
 	margin: auto;
-	color:black;
-}
-
-.z-imagelabel-label {
 	text-align: center;
 }
