@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Specification-Title: frozendemo
+Specification-Version: 0.8.0
+Implementation-Title: org.zkoss.frozendemo
+Implementation-Version: 0.8.0

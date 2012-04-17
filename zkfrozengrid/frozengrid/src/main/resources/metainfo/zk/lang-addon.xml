@@ -1,0 +1,30 @@
+<language-addon>
+    <addon-name>frozenGrid</addon-name>
+  	<version>
+		<version-class>org.zkoss.zul.frozenGrid.Version</version-class>
+		<version-uid>0.8.0</version-uid>
+		<zk-version>6.0.0</zk-version>
+	</version>
+    
+	<language-name>xul/html</language-name>
+	<component>
+		<component-name>frozenGrid</component-name>
+		<component-class>org.zkoss.zul.frozenGrid.FrozenGrid</component-class>
+		<extends>div</extends>
+		<annotation>
+			<annotation-name>ZKBIND</annotation-name>
+			<attribute>
+				<attribute-name>RENDERER</attribute-name>
+				<attribute-value>rowRenderer=org.zkoss.bind.impl.BindRowRenderer</attribute-value>
+			</attribute>
+		</annotation>
+		<annotation>
+			<annotation-name>ZKBIND</annotation-name>
+			<property-name>model</property-name>
+			<attribute>
+				<attribute-name>CONVERTER</attribute-name>
+				<attribute-value>org.zkoss.zul.frozenGrid.FrozenGridModelConverter</attribute-value>
+			</attribute>
+		</annotation>		
+	</component>
+</language-addon>
