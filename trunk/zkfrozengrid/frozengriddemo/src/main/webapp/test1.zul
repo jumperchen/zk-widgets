@@ -1,0 +1,47 @@
+<zk>
+<window>
+	<frozenGrid height="200px" width="300px" columns="1" rows="2">
+		<template name="columns">
+           	<columns>
+           		<column label="col 1" width="80px"/>
+           		<column label="col 2" width="80px"/>
+           		<column label="col 3" width="80px"/>
+           		<column label="col 4" width="80px"/>
+           		<column label="col 5" width="80px"/>
+           	</columns>
+        </template>
+        <template name="rows">
+           	<rows>
+	            <row forEach="1,2,3,4,5,6,7,8,9">
+	            	<label value="item ${each}1"/>
+	            	<label value="item ${each}2"/>
+	            	<label value="item ${each}3"/>
+	            	<label value="item ${each}4"/>
+	            	<label value="item ${each}5"/>
+	            </row>
+	        </rows>
+        </template>
+	</frozenGrid>
+	
+	<separator></separator>
+	<grid height="200px" width="300px">
+			<columns>
+           		<column label="col 1" width="80px"/>
+           		<column label="col 2" width="80px"/>
+           		<column label="col 3" width="80px"/>
+           		<column label="col 4" width="80px"/>
+           		<column label="col 5" width="80px"/>
+           	</columns>
+           	<frozen columns="1"/>
+         	<rows>
+	            <row forEach="1,2,3,4,5,6,7,8,9">
+	            	<label value="item ${each}1"/>
+	            	<label value="item ${each}2"/>
+	            	<label value="item ${each}3"/>
+	            	<label value="item ${each}4"/>
+	            	<label value="item ${each}5"/>
+	            </row>
+	        </rows>
+	</grid>
+</window>
+</zk>

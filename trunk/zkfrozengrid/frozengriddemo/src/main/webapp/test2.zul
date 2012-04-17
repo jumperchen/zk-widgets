@@ -1,0 +1,14 @@
+<zk>
+	<window apply="org.zkoss.frozendemo.TestComposer4">
+
+		<frozenGrid height="200px" width="500px" columns="3" rows="2"
+			model="${model}" rowRenderer="${renderer}">
+			<template name="columns">
+				<columns>
+					<column label="col ${each }"
+						forEach="0,1,2,3,4,5,6,7,8,9" width="80px" />
+				</columns>
+			</template>
+		</frozenGrid>
+	</window>
+</zk>

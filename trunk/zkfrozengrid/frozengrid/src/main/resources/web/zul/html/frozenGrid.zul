@@ -1,0 +1,50 @@
+<?taglib uri="http://www.zkoss.org/dsp/web/core" prefix="c" ?>
+<zk xmlns:w="client" xmlns:n="native">
+	<style>
+		.fixgrid div { 
+			overflow: hidden; 
+		} 
+		.nowrap .z-row-cnt {
+			white-space: nowrap;
+		}
+	</style>
+	<script>
+		function doBind(wgt) { 
+			var trGrid = wgt.$f('trGrid');
+		
+			jq(wgt.ebody).scroll(function(evt){
+				wgt.$f("blGrid").ebody.scrollTop = evt.target.scrollTop;
+				if (trGrid.ehead)
+					trGrid.ehead.scrollLeft = trGrid.ebody.scrollLeft = evt.target.scrollLeft;
+			});
+		}
+		function afterCalcSize(wgt) { 
+			//wgt.$f('trGrid').ehead.style.width = wgt.ehead.style.width;
+			if (wgt.ehead)
+				wgt.$f('trGrid').setWidth(wgt.ehead.style.width);
+		}
+	</script>
+	
+	
+	<hlayout stubonly="true" hflex="1" vflex="1" spacing="0px" style="background: #F7F7F7" sclass="nowrap">
+		<vlayout stubonly="true" hflex="min" vflex="1" spacing="0px" 
+			w:beforeChildrenFlex_="function(kid){this.lastChild.setHeight(jq.px0(jq.scrollbarWidth() - 1));return this.$beforeChildrenFlex_(kid);}">
+			<grid id="tlGrid" hflex="min" visible="@init(true)"
+				style="border-right: none;border-bottom: none;" />
+			<grid id="blGrid" hflex="min" vflex="1" visible="@init(true)"
+				style="border-right: none;border-bottom: none;" sclass="fixgrid" />
+			<div hflex="1" id="toolbar"
+				style="background:#DFDED8; border-left: 1px solid #CFCFCF; border-bottom: 1px solid #CFCFCF;">
+			</div>
+		</vlayout>
+		<vlayout stubonly="true" hflex="1" vflex="1" spacing="0px">
+			<hlayout stubonly="true" spacing="0px">
+				<grid id="trGrid" style="border-bottom: none;" sclass="fixgrid" visible="@init(true)" 
+					w:_calcSize="function(){this.$_calcSize();this.ebody.style.overflowX = '';}"/>
+				<div hflex="1" vflex="1" stubonly="true" style="border-right: 1px solid #CFCFCF; border-top: 1px solid #CFCFCF;"/>
+			</hlayout>
+			<grid id="brGrid" hflex="1" vflex="1" visible="@init(true)" 
+				w:onBind="doBind(this)" w:_calcSize="function(){this.$_calcSize();afterCalcSize(this);}"/>
+		</vlayout>
+	</hlayout>
+</zk>

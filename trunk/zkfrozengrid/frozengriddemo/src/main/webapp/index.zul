@@ -1,0 +1,30 @@
+<zk>
+	<window apply="org.zkoss.bind.BindComposer"
+		viewModel="@id('vm')@init('org.zkoss.frozendemo.DemoViewModel')" 
+		title="FrozenGrid Demo" border="normal" hflex="min">
+		
+	<frozenGrid width="500px" height="400px" columns="1" rows="2" model="@load(vm.model)">
+		<template name="columns">
+           	<columns>
+				<column label="state" width="100px" />
+				<column label="cases" width="50px" />
+				<column label="deaths" width="60px"/>
+				<column label="description" width="350px"/>
+				<column label="latitude" width="70px"/>
+				<column label="longitude" width="70px"/>
+			</columns>
+        </template>
+       	<template name="model" var="info">
+       		<row>
+       			<label value="${info.state}"/>
+       			<label value="${info.cases}"/>
+       			<label value="${info.cases}"/>
+				<label value="${info.deaths}"/>
+				<label value="${info.description}"/>
+				<label value="${info.latitude}"/>
+				<label value="${info.longitude}"/>
+       		</row>
+       	</template>
+	</frozenGrid>
+	</window>
+</zk>

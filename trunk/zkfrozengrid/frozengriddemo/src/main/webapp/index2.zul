@@ -1,0 +1,27 @@
+<zk>
+	<window apply="org.zkoss.bind.BindComposer"
+		viewModel="@id('vm')@init('org.zkoss.frozendemo.DemoViewModel')" >
+		
+	
+		<grid width="500px" height="400px" model="@load(vm.model)">
+			<columns>
+				<column label="state" width="100px"/>
+				<column label="cases" width="50px"/>
+				<column label="deaths" width="60px"/>
+				<column label="description" width="350px"/>
+				<column label="latitude" width="70px"/>
+				<column label="longitude" width="70px"/>
+			</columns>
+			<template name="model" var="info">
+           		<row>
+           			<label value="@load(info.state)"/>
+					<label value="@load(info.cases)"/>
+					<label value="@load(info.deaths)"/>
+					<label value="@load(info.description)"/>
+					<label value="@load(info.latitude)"/>
+					<label value="@load(info.longitude)"/>
+           		</row>
+           	</template>
+		</grid>
+	</window>
+</zk>

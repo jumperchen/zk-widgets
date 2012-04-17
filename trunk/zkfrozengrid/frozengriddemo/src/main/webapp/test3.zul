@@ -1,0 +1,36 @@
+<zk>
+<window apply="org.zkoss.frozendemo.TestComposer4">
+	
+	<frozenGrid height="200px" width="500px" columns="3" rows="2" 
+		model="${model}" >
+		<template name="columns">
+           	<columns>
+           		<column label="col ${each }" forEach="0,1,2,3,4,5,6,7,8,9" 
+           			width="80px"/>
+           	</columns>
+        </template>
+       	<template name="model">
+       		<row>
+       			<label forEach="${each}" value="${each }"/>
+       		</row>
+       	</template>
+	</frozenGrid>
+	    
+	    
+	<separator></separator>
+	
+	<grid height="200px" width="500px" model="${model}" >
+			<columns>
+           		<column label="col ${each }" forEach="0,1,2,3,4,5,6,7,8,9" width="80px"/>
+           	</columns>
+           	<frozen columns="3">
+           		<label value="text"/>
+           	</frozen>
+           	<template name="model">
+           		<row>
+           			<label forEach="${each}" value="${each }"/>
+           		</row>
+           	</template>
+	</grid>
+</window>
+</zk>
