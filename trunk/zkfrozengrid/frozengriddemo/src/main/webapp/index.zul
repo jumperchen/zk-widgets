@@ -3,26 +3,55 @@
 		viewModel="@id('vm')@init('org.zkoss.frozendemo.DemoViewModel')" 
 		title="FrozenGrid Demo" border="normal" hflex="min">
 		
-	<frozenGrid width="500px" height="400px" columns="1" rows="2" model="@load(vm.model)">
+	<frozenGrid width="800px" height="400px" columns="6" rows="2" model="@load(vm.model)">
 		<template name="columns">
            	<columns>
-				<column label="state" width="100px" />
-				<column label="cases" width="50px" />
-				<column label="deaths" width="60px"/>
-				<column label="description" width="350px"/>
-				<column label="latitude" width="70px"/>
-				<column label="longitude" width="70px"/>
+				<column label="Player" width="60px"/>
+				<column label="No." width="35px"/>
+				<column label="Date" width="80px"/>
+				<column label="Time" width="60px"/>
+				<column label="Location" width="100px"/>
+				<column label="Opponent" width="80px"/>
+				<column label="AB" width="35px"/>
+				<column label="R" width="35px"/>
+				<column label="H" width="35px"/>
+				<column label="1B" width="35px"/>
+				<column label="2B" width="35px"/>
+				<column label="3B" width="35px"/>
+				<column label="HR" width="35px"/>
+				<column label="RBI" width="35px"/>
+				<column label="SO" width="35px"/>
+				<column label="BB" width="35px"/>
+				<column label="SAC" width="35px"/>
+				<column label="HP" width="35px"/>
+				<column label="PO" width="35px"/>
+				<column label="A" width="35px"/>
+				<column label="E" width="35px"/>
 			</columns>
         </template>
-       	<template name="model" var="info">
+       	<template name="model" var="s">
        		<row>
-       			<label value="${info.state}"/>
-       			<label value="${info.cases}"/>
-       			<label value="${info.cases}"/>
-				<label value="${info.deaths}"/>
-				<label value="${info.description}"/>
-				<label value="${info.latitude}"/>
-				<label value="${info.longitude}"/>
+       			<label value="${s.player}"/>
+				<label value="${s.no}"/>
+				<label value="${s.date}"/>
+				<label value="${s.time}"/>
+				<label value="${s.location}"/>
+				<label value="${s.opponent}"/>
+				<label value="${s.ab}"/>
+				<label value="${s.r}"/>
+				<label value="${s.h}"/>
+				<label value="${s.b1}"/>
+				<label value="${s.b2}"/>
+				<label value="${s.b3}"/>
+				<label value="${s.hr}"/>
+				<label value="${s.rbi}"/>
+				<label value="${s.so}"/>
+				<label value="${s.bb}"/>
+				<label value="${s.sac}"/>
+				<label value="${s.hp}"/>
+				<label value="${s.po}"/>
+				<label value="${s.a}"/>
+				<label value="${s.e}"/>
        		</row>
        	</template>
 	</frozenGrid>

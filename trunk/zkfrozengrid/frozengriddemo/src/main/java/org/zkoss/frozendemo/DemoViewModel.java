@@ -14,32 +14,31 @@ import au.com.bytecode.opencsv.bean.CsvToBean;
 
 public class DemoViewModel {
 
-	private ListModel<SwineFluInfo> model;
+	private ListModel<Score> model;
 	private String selectedItem;
 	private String selectedItem2;
-
 	
 	@Init
 	public void init() {
 		
-		List<SwineFluInfo> list = loadInfo();
-		 model = new ListModelList<SwineFluInfo>(list);
+		List<Score> list = loadInfo();
+		 model = new ListModelList<Score>(list);
 	}
 
-	private List<SwineFluInfo> loadInfo() {
-		CSVReader reader = new CSVReader(new InputStreamReader(getClass().getClassLoader().getResourceAsStream("swineFlu.csv")));
-		ColumnPositionMappingStrategy<SwineFluInfo> strat = new ColumnPositionMappingStrategy<SwineFluInfo>();
-		String[] columns = new String[] { "state", "cases", "deaths",
-				"description", "latitude", "longitude" }; // the fields to bind
-		strat.setType(SwineFluInfo.class);
+	private List<Score> loadInfo() {
+		CSVReader reader = new CSVReader(new InputStreamReader(getClass().getClassLoader().getResourceAsStream("ScoreSheet.csv")));
+		ColumnPositionMappingStrategy<Score> strat = new ColumnPositionMappingStrategy<Score>();
+		String[] columns = new String[] {"Player", "No.", "Date", "Time", "Location", "Opponent", 
+				 "AB", "R", "H", "1B", "2B", "3B", "HR", "RBI", "SO", "BB", "SAC", "HP", "PO", "A", "E"}; // the fields to bind
+		strat.setType(Score.class);
 		strat.setColumnMapping(columns);
 		
-		CsvToBean<SwineFluInfo> csv = new CsvToBean<SwineFluInfo>();
+		CsvToBean<Score> csv = new CsvToBean<Score>();
 		return csv.parse(strat, reader);
 	}
 
 	
-	public ListModel<SwineFluInfo> getModel() {
+	public ListModel<Score> getModel() {
 		return model;
 	}
 	

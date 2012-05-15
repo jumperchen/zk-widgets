@@ -398,7 +398,7 @@ public class FrozenGrid extends Div implements IdSpace, AfterCompose {
 			int index, List<Component> children, Map<Integer, List<Component>> cellCache) {
 		if (children.isEmpty()) return;
 		if (_columns > 0) {
-			List<Component> list = children.subList(0, _columns + 1);
+			List<Component> list = children.subList(0, _columns);
 			if (!list.isEmpty())
 				cellCache.put(index, new ArrayList<Component>(list));
 			list.clear();
@@ -407,9 +407,7 @@ public class FrozenGrid extends Div implements IdSpace, AfterCompose {
 	
 	private void storeRightCells(int index, List<Component> children,
 			Map<Integer, List<Component>> cellCache) {
-		
 		if (children.isEmpty()) return;
-		
 		int size = children.size();
 		List<Component> list = children.subList(_columns, size);
 		if (!list.isEmpty())

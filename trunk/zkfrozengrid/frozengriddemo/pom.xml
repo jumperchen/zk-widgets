@@ -5,9 +5,9 @@
 	<artifactId>frozengriddemo</artifactId>
 	<version>0.8.0</version>
 	<properties>
-		<zk.version>6.0.1.FL.20120413</zk.version>
+		<zk.version>6.0.1</zk.version>
 		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
-		<packname>-0.8.0-FL-${maven.build.timestamp}</packname>
+		<packname>-${project.version}-FL-${maven.build.timestamp}</packname>
 	</properties>
 	<packaging>war</packaging>
 	<name>The frozendemo Project</name>

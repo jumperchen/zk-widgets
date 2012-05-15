@@ -3,23 +3,54 @@
 		viewModel="@id('vm')@init('org.zkoss.frozendemo.DemoViewModel')" >
 		
 	
-		<grid width="500px" height="400px" model="@load(vm.model)">
+		<grid width="800px" height="400px" model="@load(vm.model)">
 			<columns>
-				<column label="state" width="100px"/>
-				<column label="cases" width="50px"/>
-				<column label="deaths" width="60px"/>
-				<column label="description" width="350px"/>
-				<column label="latitude" width="70px"/>
-				<column label="longitude" width="70px"/>
+				<column label="Player" width="60px"/>
+				<column label="No." width="35px"/>
+				<column label="Date" width="80px"/>
+				<column label="Time" width="60px"/>
+				<column label="Location" width="100px"/>
+				<column label="Opponent" width="80px"/>
+				<column label="AB" width="35px"/>
+				<column label="R" width="35px"/>
+				<column label="H" width="35px"/>
+				<column label="1B" width="35px"/>
+				<column label="2B" width="35px"/>
+				<column label="3B" width="35px"/>
+				<column label="HR" width="35px"/>
+				<column label="RBI" width="35px"/>
+				<column label="SO" width="35px"/>
+				<column label="BB" width="35px"/>
+				<column label="SAC" width="35px"/>
+				<column label="HP" width="35px"/>
+				<column label="PO" width="35px"/>
+				<column label="A" width="35px"/>
+				<column label="E" width="35px"/>
 			</columns>
-			<template name="model" var="info">
+			<frozen columns="6"/>
+			<template name="model" var="s">
            		<row>
-           			<label value="@load(info.state)"/>
-					<label value="@load(info.cases)"/>
-					<label value="@load(info.deaths)"/>
-					<label value="@load(info.description)"/>
-					<label value="@load(info.latitude)"/>
-					<label value="@load(info.longitude)"/>
+           			<label value="@init(s.player)"/>
+					<label value="@init(s.no)"/>
+					<label value="@init(s.date)"/>
+					<label value="@init(s.time)"/>
+					<label value="@init(s.location)"/>
+					<label value="@init(s.opponent)"/>
+					<label value="@init(s.ab)"/>
+					<label value="@init(s.r)"/>
+					<label value="@init(s.h)"/>
+					<label value="@init(s.b1)"/>
+					<label value="@init(s.b2)"/>
+					<label value="@init(s.b3)"/>
+					<label value="@init(s.hr)"/>
+					<label value="@init(s.rbi)"/>
+					<label value="@init(s.so)"/>
+					<label value="@init(s.bb)"/>
+					<label value="@init(s.sac)"/>
+					<label value="@init(s.hp)"/>
+					<label value="@init(s.po)"/>
+					<label value="@init(s.a)"/>
+					<label value="@init(s.e)"/>
            		</row>
            	</template>
 		</grid>
