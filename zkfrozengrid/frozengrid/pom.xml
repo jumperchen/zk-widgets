@@ -7,7 +7,7 @@
 	<properties>
 		<zk.version>6.0.0</zk.version>
 		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
-		<packname>-${project.version}</packname>
+		<packname>-${project.version}-FL-${maven.build.timestamp}</packname>
 	</properties>
 	<packaging>jar</packaging>
 	<name>The frozenGrid library</name>
