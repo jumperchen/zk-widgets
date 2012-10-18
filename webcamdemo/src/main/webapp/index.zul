@@ -1,0 +1,9 @@
+<zk>
+    <window title="ZK Webcam Demo" mode="overlapped" border="normal">
+        <html>
+            <h4>The picture will be shown on the canvas below:</h4>
+        </html>
+        <canvas id="cvs" width="320px" height="240px" style="border: 2px dashed red"/>
+        <webcam id="myCam" width="350px" timer="3" uploadUrl="img/absroottimer.jpg" canvas="${cvs}" mode="callback" />
+    </window>
+</zk>
